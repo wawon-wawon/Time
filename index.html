@@ -1,23 +1,33 @@
-<span id="view_clock"></span>
+<!DOCTYPE html>
+<html lang="ja" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
 
-<script type="text/javascript">
-timerID = setInterval('clock()',500); //0.5秒毎にclock()を実行
 
-function clock() {
-	document.getElementById("view_clock").innerHTML = getNow();
-}
+    <script type="text/javascript">
+    timerID = setInterval('clock()',500); //0.5秒毎にclock()を実行
 
-function getNow() {
-	var now = new Date();
-	var year = now.getFullYear();
-	var mon = now.getMonth()+1; //１を足すこと
-	var day = now.getDate();
-	var hour = now.getHours();
-	var min = now.getMinutes();
-	var sec = now.getSeconds();
+    function clock() {
+    	document.getElementById("view_clock").innerHTML = getNow();
+    }
 
-	//出力用
-	var s = year + "年" + mon + "月" + day + "日" + hour + "時" + min + "分" + sec + "秒";
-	return s;
-}
-</script>
+    function getNow() {
+    	var now = new Date();
+    	var year = now.getFullYear();
+    	var mon = now.getMonth()+1; //１を足すこと
+    	var day = now.getDate();
+    	var hour = now.getHours();
+    	var min = now.getMinutes();
+    	var sec = now.getSeconds();
+
+    	//出力用
+    	var s = year + "年" + mon + "月" + day + "日" + hour + "時" + min + "分" + sec + "秒";
+    	return s;
+    }
+    </script>
+  </head>
+  <body>
+    <span id="view_clock"></span>
+  </body>
+</html>
